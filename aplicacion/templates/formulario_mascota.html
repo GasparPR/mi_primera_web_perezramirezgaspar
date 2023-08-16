@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="nombre_mascota">Nombre Mascota:</label>
+        <input type="text" name="nombre_mascota" required><br>
+        <label for="tamanio_mascota">Tamanio Mascota:</label>
+        <input type="text" name="tamanio_mascota" required><br>
+        <label for="peso_mascota">Peso Mascota:</label>
+        <input type="text" name="peso_mascota" required><br>
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}

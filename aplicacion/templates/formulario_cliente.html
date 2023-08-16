@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ formulario_cliente.nombre_cliente.id_for_label }}">Nombre Cliente:</label>
+        {{ formulario_cliente.nombre_cliente }}<br>
+        <label for="{{ formulario_cliente.apellido_cliente.id_for_label }}">Apellido Cliente:</label>
+        {{ formulario_cliente.apellido_cliente }}<br>
+        <label for="{{ formulario_cliente.telefono_cliente.id_for_label }}">Telefono:</label>
+        {{ formulario_cliente.telefono_cliente }}<br>
+        <label for="{{ formulario_cliente.email_cliente.id_for_label }}">Email:</label>
+        {{ formulario_cliente.email_cliente }}<br>
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="nombre_paseador">Nombre paseador:</label>
+        <input type="text" name="nombre_paseador" required><br>
+        <label for="apellido_paseador">Apellido Paseador:</label>
+        <input type="text" name="apellido_paseador" required><br>
+        <label for="telefono_paseador">Telefono:</label>
+        <input type="text" name="telefono_paseador" required><br>
+        <label for="email_paseador">Email:</label>
+        <input type="text" name="email_paseador" required><br>
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}
